@@ -11,13 +11,13 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class AndroidActions {
+public class AndroidActions extends appiumUtils{
 	
 	AndroidDriver driver;
 
 	
 	public AndroidActions(AndroidDriver driver) {
-
+super(driver);
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 
@@ -45,10 +45,6 @@ public class AndroidActions {
 				AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+scrollText+"\"));"));
 	}
 
-	public Double getFormatedAmount(String amount) {
-
-		Double price = Double.parseDouble(amount.substring(1));
-		return price;
-	}
+	 
 
 }

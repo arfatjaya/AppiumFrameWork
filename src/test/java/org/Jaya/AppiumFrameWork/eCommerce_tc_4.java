@@ -1,5 +1,10 @@
 package org.Jaya.AppiumFrameWork;
 
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
@@ -23,13 +28,13 @@ import io.appium.java_client.functions.ExpectedCondition;
 
 public class eCommerce_tc_4 extends BaseTest {
 
-	@Test
-	public void fillform() throws InterruptedException {
+	@Test(dataProvider="getdata")
+	public void fillform(String name,String gender,String country) throws InterruptedException {
 
 		Thread.sleep(3000);
-		formPage.setNameField("Arfat jaya");
-		formPage.setGender("female");
-		formPage.setCountryDropDown("Brazil");
+		formPage.setNameField(name);
+		formPage.setGender(gender);
+		formPage.setCountryDropDown(country);
 		productCatalogue productCatalogue = formPage.submitButton();
 
 		productCatalogue.addItemToCart(0);
@@ -47,10 +52,40 @@ public class eCommerce_tc_4 extends BaseTest {
 		double sum = cartPage.getProductSum();
 		double displayforsum = cartPage.getTotalAmountDisplay();
 
-		Assert.assertEquals(sum, displayforsum);
+		AssertJUnit.assertEquals(sum, displayforsum);
 		cartPage.acceptTermAndCondition();
 		cartPage.submitOrder();
 
 	}
+	
+	
+	  @DataProvider 
+	  public Object[][] getdata() {
+	  
+	  
+	  return new Object[][] {{"ARFAT JAYA" , "female" , "Brazil"}}; 
+	  
+	  }
+	 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

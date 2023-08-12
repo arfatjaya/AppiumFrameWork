@@ -2,20 +2,37 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-06T16:15:31 IST" name="Default suite" finished-at="2023-08-06T16:16:07 IST" duration-ms="36116">
+  <suite started-at="2023-08-12T10:48:57 IST" name="Suite" finished-at="2023-08-12T10:49:39 IST" duration-ms="42160">
     <groups>
     </groups>
-    <test started-at="2023-08-06T16:15:31 IST" name="Default test" finished-at="2023-08-06T16:16:07 IST" duration-ms="36116">
+    <test started-at="2023-08-12T10:48:57 IST" name="Test" finished-at="2023-08-12T10:49:39 IST" duration-ms="42160">
       <class name="org.Jaya.AppiumFrameWork.eCommerce_tc_4">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:org.Jaya.AppiumFrameWork.eCommerce_tc_4@563f38c4]" started-at="2023-08-06T16:15:31 IST" name="ConfigureAppium" finished-at="2023-08-06T16:15:40 IST" duration-ms="9203" status="PASS">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:org.Jaya.AppiumFrameWork.eCommerce_tc_4@39d9314d]" started-at="2023-08-12T10:48:57 IST" name="ConfigureAppium" finished-at="2023-08-12T10:49:08 IST" duration-ms="10796" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method signature="fillform()[pri:0, instance:org.Jaya.AppiumFrameWork.eCommerce_tc_4@563f38c4]" started-at="2023-08-06T16:15:40 IST" name="fillform" finished-at="2023-08-06T16:16:07 IST" duration-ms="26863" status="PASS">
+        <test-method signature="fillform(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.Jaya.AppiumFrameWork.eCommerce_tc_4@39d9314d]" started-at="2023-08-12T10:49:08 IST" name="fillform" data-provider="getdata" finished-at="2023-08-12T10:49:39 IST" duration-ms="31309" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ARFAT JAYA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[female]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Brazil]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillform -->
       </class> <!-- org.Jaya.AppiumFrameWork.eCommerce_tc_4 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
