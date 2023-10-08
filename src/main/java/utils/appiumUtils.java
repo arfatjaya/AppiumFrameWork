@@ -1,11 +1,17 @@
 package utils;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.aventstack.extentreports.utils.FileUtil;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -36,5 +42,14 @@ public class appiumUtils {
 		 wait.until(ExpectedConditions.attributeContains((ele), "text", "Cart"));
 		
 	}
+	
+	public String getScreenShot(String testCaseName,AppiumDriver driver) throws IOException {
+		
+		File source=driver.getScreenshotAs(OutputType.FILE);
+		String destination=System.getProperty("user.dir") +"\\reports"+testCaseName+".png";
+		FileUtils.copyFile(source, new File(destination));
+		 return destination;
+		
 
+}
 }

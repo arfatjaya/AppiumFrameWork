@@ -4,13 +4,15 @@
 	
 	<listeners>
 		
-		<listener class-name="utils.Listeners"/>
+		<listener class-name="utils.TestListener"/>
 		
 		
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-       <class name="org.Jaya.AppiumFrameWork.eCommerce_tc_4"/>
+		 <class name="SutiHR.SutiHrLogin"/>
+      <!-- <class name="org.Jaya.AppiumFrameWork.eCommerce_tc_4"/>-->
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

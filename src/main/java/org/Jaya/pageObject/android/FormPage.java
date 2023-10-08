@@ -83,23 +83,4 @@ public class FormPage extends AndroidActions{
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

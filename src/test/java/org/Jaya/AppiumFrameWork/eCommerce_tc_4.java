@@ -63,7 +63,7 @@ public class eCommerce_tc_4 extends BaseTest {
 	  public Object[][] getdata() {
 	  
 	  
-	  return new Object[][] {{"ARFAT JAYA" , "female" , "Brazil"}}; 
+	  return new Object[][] {{"ARFAT JAYA" , "femall" , "Brazil"}}; 
 	  
 	  }
 	 

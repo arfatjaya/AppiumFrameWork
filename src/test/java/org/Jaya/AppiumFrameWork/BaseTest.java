@@ -39,15 +39,20 @@ public class BaseTest {
 		UiAutomator2Options option = new UiAutomator2Options();
 		option.setDeviceName("vivo V2151");
 //	option.setDeviceName("realme narzo N55");
-		option.setApp(
-				"C:\\Users\\samqu\\eclipse-workspace\\AppiumTutorial\\src\\test\\java\\Resource\\General-Store.apk");
+
+		// SET APP PATH-----------------------------------------------
+
+		// option.setApp("C:\\Users\\samqu\\eclipse-workspace\\AppiumTutorial\\src\\test\\java\\Resource\\General-Store.apk");
+
+		option.setApp("C:\\Users\\samqu\\git\\AppiumFrameWork\\AppiumFrameWork\\src\\test\\java\\Resource\\SutiHR.apk");
 
 		// URL appiumServerURL = new URL("http://192.168.183.35:4723");
 		URL appiumServerURL = new URL("http://127.0.0.1:4723");
 
 		driver = new AndroidDriver(appiumServerURL, option);
-		//creates an instance of a class named FormPage, passing a driver object as a parameter to its constructor.
-		 formPage =new FormPage(driver);
+		// creates an instance of a class named FormPage, passing a driver object as a
+		// parameter to its constructor.
+		formPage = new FormPage(driver);
 	}
 
 	// thismethod will long press
@@ -88,6 +93,5 @@ public class BaseTest {
 		Double price = Double.parseDouble(amount.substring(1));
 		return price;
 	}
-	
-	
+
 }
