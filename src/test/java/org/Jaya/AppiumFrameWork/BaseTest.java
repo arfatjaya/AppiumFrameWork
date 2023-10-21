@@ -42,9 +42,9 @@ public class BaseTest {
 
 		// SET APP PATH-----------------------------------------------
 
-		// option.setApp("C:\\Users\\samqu\\eclipse-workspace\\AppiumTutorial\\src\\test\\java\\Resource\\General-Store.apk");
+	// option.setApp("C:\\Users\\samqu\\eclipse-workspace\\AppiumTutorial\\src\\test\\java\\Resource\\General-Store.apk");
 
-		option.setApp("C:\\Users\\samqu\\git\\AppiumFrameWork\\AppiumFrameWork\\src\\test\\java\\Resource\\SutiHR.apk");
+	 	option.setApp("C:\\Users\\samqu\\git\\AppiumFrameWork\\AppiumFrameWork\\src\\test\\java\\Resource\\SutiHR.apk");
 
 		// URL appiumServerURL = new URL("http://192.168.183.35:4723");
 		URL appiumServerURL = new URL("http://127.0.0.1:4723");
@@ -93,5 +93,27 @@ public class BaseTest {
 		Double price = Double.parseDouble(amount.substring(1));
 		return price;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

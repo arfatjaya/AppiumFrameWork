@@ -1,5 +1,8 @@
 package utils;
 
+import java.util.NoSuchElementException;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
@@ -45,6 +48,18 @@ super(driver);
 				AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+scrollText+"\"));"));
 	}
 
-	 
+	public String getElementText(WebElement element) {
+        return element.getText();
+    }
+	
+	
+	 public boolean isElementPresent(WebElement element) {
+	        try {
+	            element.isDisplayed();
+	            return true;
+	        } catch (NoSuchElementException e) {
+	            return false;
+	        }
+	    }
 
 }
