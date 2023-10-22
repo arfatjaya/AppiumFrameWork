@@ -80,7 +80,7 @@ public class SutiHRApplyTimeOff extends BaseTest {
 	        loginPage.login("dmoore", "test0101");
 
 	        // Handle permission dialog here if needed
-Thread.sleep(5000);
+	        Thread.sleep(5000);
 	        ApplyTimeOffPage timeOffPage = new ApplyTimeOffPage(driver);
 	        timeOffPage.applyTimeOff();
 	        
