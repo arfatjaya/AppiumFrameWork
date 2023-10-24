@@ -10,7 +10,7 @@
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-		 <class name="SutiHR.SutiHrLogin"/>
+		 <class name="org.Jaya.pageObject.android.SutiHr.ApplyTimeOffPage"/>
       <!-- <class name="org.Jaya.AppiumFrameWork.eCommerce_tc_4"/>-->
       
     </classes>
