@@ -38,31 +38,9 @@ public class BaseTest {
 		
 		service.start();
 		
+		 
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		//-------------------------------------------------------------------
-		
-		// run server auto matic
-
-		/*
-		 * AppiumDriverLocalService service=new AppiumServiceBuilder().withAppiumJS(new
-		 * File(
-		 * "C:\\Users\\samqu\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"
-		 * )) .withIPAddress("127.0.0.1").usingPort(4723).build();
-		 */
-
-		// service.start();
+		 
 
 		UiAutomator2Options option = new UiAutomator2Options();
 		option.setDeviceName("vivo V2151");
@@ -70,9 +48,9 @@ public class BaseTest {
 
 		// SET APP PATH-----------------------------------------------
 
-	// option.setApp("C:\\Users\\samqu\\eclipse-workspace\\AppiumTutorial\\src\\test\\java\\Resource\\General-Store.apk");
+//	option.setApp("C:\\Users\\samqu\\eclipse-workspace\\AppiumTutorial\\src\\test\\java\\Resource\\General-Store.apk");
 
-	 	option.setApp("C:\\Users\\samqu\\git\\AppiumFrameWork\\AppiumFrameWork\\src\\test\\java\\Resource\\SutiHR.apk");
+	option.setApp("C:\\Users\\samqu\\git\\AppiumFrameWork\\AppiumFrameWork\\src\\test\\java\\Resource\\SutiHR.apk");
 
 		// URL appiumServerURL = new URL("http://192.168.183.35:4723");
 		URL appiumServerURL = new URL("http://127.0.0.1:4723");

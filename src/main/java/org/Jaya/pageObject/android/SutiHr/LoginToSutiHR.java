@@ -47,6 +47,11 @@ public class LoginToSutiHR extends AndroidActions{
     
     @FindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
     private WebElement permission;
+    
+    @FindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
+    private WebElement LocationPermission;
+    
+    
   
   
     public void login(String username, String password) throws InterruptedException {
@@ -56,8 +61,11 @@ public class LoginToSutiHR extends AndroidActions{
         rememberPwdCheckbox.click();
         loginButton.click();
         Thread.sleep(8000);
+        LocationPermission.click();
+        Thread.sleep(8000);
         permission.click();
         Thread.sleep(5000);
+       
     }
 	
 	

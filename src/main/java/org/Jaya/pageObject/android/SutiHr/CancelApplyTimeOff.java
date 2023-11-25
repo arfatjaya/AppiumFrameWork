@@ -40,11 +40,11 @@ public class CancelApplyTimeOff extends AndroidActions {
 
 
     
-	@FindBy(id = "com.SutiSoft.sutihr:id/timeOffLayout")
-    private WebElement ApplyTimeoff;
+	@FindBy(id = "com.SutiSoft.sutihr:id/navigationMenuImageView")
+    private WebElement Menu;
 
-    @FindBy(xpath = "//android.widget.RadioButton[contains(@text, 'Maternity')]")
-    private WebElement maternityRadioButton;
+    @FindBy(xpath = "//android.widget.TextView[@text='Time Off']")
+    private WebElement timeoff;
 
     @FindBy(id = "com.SutiSoft.sutihr:id/okbtn")
     private WebElement okButton;
@@ -71,37 +71,21 @@ public class CancelApplyTimeOff extends AndroidActions {
     
     
     
-    public void applyTimeOff() {
+    public void CancelApplYTimeoff() {
         try {
         	
-        	if(isElementPresent(ApplyTimeoff))
+        	if(isElementPresent(Menu))
         	{
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
             
-            wait.until(ExpectedConditions.elementToBeClickable(ApplyTimeoff)).click();
-            if(isElementPresent(maternityRadioButton))
+            wait.until(ExpectedConditions.elementToBeClickable(Menu)).click();
+            if(isElementPresent(timeoff))
         	{
             
-            wait.until(ExpectedConditions.elementToBeClickable(maternityRadioButton)).click();
-            wait.until(ExpectedConditions.elementToBeClickable(okButton)).click();
-
-            wait.until(ExpectedConditions.elementToBeClickable(fromDateButton)).click();
-            wait.until(ExpectedConditions.elementToBeClickable(fromDateSelect)).click();
-            SelectDateOkButton.click();
-            wait.until(ExpectedConditions.elementToBeClickable(toDateButton)).click();
-            wait.until(ExpectedConditions.elementToBeClickable(fromDateSelect)).click();
-            SelectDateOkButton.click();
-            wait.until(ExpectedConditions.elementToBeClickable(saveButton)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(timeoff)).click();
+             
             
-            if (isElementPresent(Holidayalert)) {
-                String expectedText = "A holiday has been declared on the requested date";
-                String holidayAlertText = new AndroidActions(driver).getElementText(Holidayalert);
-                AssertJUnit.assertEquals(expectedText, holidayAlertText);
-                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-                
-                System.out.println(Holidayalert.getText());
-                wait.until(ExpectedConditions.elementToBeClickable(SelectDateOkButton)).click();
-            }
+             
         	}
             }
         } catch (Exception e) {

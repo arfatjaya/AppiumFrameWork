@@ -31,7 +31,7 @@ public class TestListener   implements ITestListener{
 	    public void onTestSuccess(ITestResult result) {
 	        // Code to execute when a test succeeds
 	    	
-	    	test.log(Status.PASS, "Test pass");
+	    	test.log(Status.PASS, "Test passS");
 	    }
 
 	    @Override
