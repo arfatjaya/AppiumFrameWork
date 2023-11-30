@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SutiHR.SutiHRApplyTimeOff">
+      <class name="SutiHR.ClockInOut">
         <methods>
           <include name="ConfigureAppium"/>
-          <include name="applyTimeOffTest"/>
           <include name="endTask"/>
+          <include name="applyTimeOffTest"/>
         </methods>
-      </class> <!-- SutiHR.SutiHRApplyTimeOff -->
+      </class> <!-- SutiHR.ClockInOut -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -94,7 +94,7 @@ public class ApplyTimeOffPage extends AndroidActions {
             wait.until(ExpectedConditions.elementToBeClickable(saveButton)).click();
             
             if (isElementPresent(Holidayalert)) {
-                String expectedText = "A holiday has been declared on the requested date";
+                String expectedText = "A sholiday has been declared on the requested date";
                 String holidayAlertText = new AndroidActions(driver).getElementText(Holidayalert);
                 AssertJUnit.assertEquals(expectedText, holidayAlertText);
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
