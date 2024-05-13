@@ -1,6 +1,5 @@
 package org.Jaya.AppiumFrameWork;
 
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -9,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -18,29 +16,25 @@ import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public class BaseTest {
 
 	public AndroidDriver driver;
 	public FormPage formPage;
-	
-	AppiumDriverLocalService service=new AppiumServiceBuilder().withAppiumJS(new
-			  File(
-			  "C:\\Users\\samqu\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"
-			  )) .withIPAddress("127.0.0.1").usingPort(4723).build();
 
 	@BeforeClass
 	public void ConfigureAppium() throws MalformedURLException {
 
-		 
-		
-		service.start();
-		
-		 
-		
-		 
+		// run server auto matic
+
+		/*
+		 * AppiumDriverLocalService service=new AppiumServiceBuilder().withAppiumJS(new
+		 * File(
+		 * "C:\\Users\\samqu\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"
+		 * )) .withIPAddress("127.0.0.1").usingPort(4723).build();
+		 */
+
+		// service.start();
 
 		UiAutomator2Options option = new UiAutomator2Options();
 		option.setDeviceName("vivo V2151");
@@ -48,13 +42,24 @@ public class BaseTest {
 
 		// SET APP PATH-----------------------------------------------
 
-//	option.setApp("C:\\Users\\samqu\\eclipse-workspace\\AppiumTutorial\\src\\test\\java\\Resource\\General-Store.apk");
+	option.setApp("C:\\Users\\samqu\\eclipse-workspace\\AppiumTutorial\\src\\test\\java\\Resource\\General-Store.apk");
 
-	option.setApp("C:\\Users\\samqu\\git\\AppiumFrameWork\\AppiumFrameWork\\src\\test\\java\\Resource\\SutiHR.apk");
+	// 	option.setApp("C:\\Users\\samqu\\git\\AppiumFrameWork\\AppiumFrameWork\\src\\test\\java\\Resource\\SutiHR.apk");
 
 		// URL appiumServerURL = new URL("http://192.168.183.35:4723");
-		URL appiumServerURL = new URL("http://127.0.0.1:4723");
-
+		//URL appiumServerURL = new URL("http://127.0.0.1:4723");
+		URL appiumServerURL = new URL("http://192.168.1.9:4723");
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
 		driver = new AndroidDriver(appiumServerURL, option);
 		// creates an instance of a class named FormPage, passing a driver object as a
 		// parameter to its constructor.
@@ -105,22 +110,14 @@ public class BaseTest {
 	
 	
 	
-	 
 	
 	
 	
 	
 	
 	
-
-@AfterClass
-public void  endTask()
-
-{
-	service.stop();
 	
 	
-}
 	
 	
 	

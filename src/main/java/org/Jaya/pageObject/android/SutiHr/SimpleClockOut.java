@@ -22,12 +22,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SimpleClockIn extends AndroidActions {
+public class SimpleClockOut extends AndroidActions {
 
 	AndroidDriver driver;
 	  WebDriverWait wait;
 
-	public SimpleClockIn(AndroidDriver driver) {
+	public SimpleClockOut(AndroidDriver driver) {
 
 		// parent class constructor call
 		super(driver);

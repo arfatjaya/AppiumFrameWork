@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SutiHR.ClockInOut">
+      <class name="org.Jaya.AppiumFrameWork.eCommerce_tc_2">
         <methods>
           <include name="ConfigureAppium"/>
-          <include name="endTask"/>
-          <include name="applyTimeOffTest"/>
+          <include name="fillformError"/>
         </methods>
-      </class> <!-- SutiHR.ClockInOut -->
+      </class> <!-- org.Jaya.AppiumFrameWork.eCommerce_tc_2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
