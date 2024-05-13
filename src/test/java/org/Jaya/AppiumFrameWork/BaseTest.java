@@ -1,5 +1,6 @@
 package org.Jaya.AppiumFrameWork;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -8,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -16,6 +18,8 @@ import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public class BaseTest {
 
@@ -27,14 +31,14 @@ public class BaseTest {
 
 		// run server auto matic
 
-		/*
-		 * AppiumDriverLocalService service=new AppiumServiceBuilder().withAppiumJS(new
-		 * File(
-		 * "C:\\Users\\samqu\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"
-		 * )) .withIPAddress("127.0.0.1").usingPort(4723).build();
-		 */
+		
+		  AppiumDriverLocalService service=new AppiumServiceBuilder().withAppiumJS(new
+		  File(
+		  "C:\\Users\\samqu\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"
+		  )) .withIPAddress("192.168.1.9").usingPort(4723).build();
+		 
 
-		// service.start();
+		service.start();
 
 		UiAutomator2Options option = new UiAutomator2Options();
 		option.setDeviceName("vivo V2151");
@@ -64,6 +68,8 @@ public class BaseTest {
 		// creates an instance of a class named FormPage, passing a driver object as a
 		// parameter to its constructor.
 		formPage = new FormPage(driver);
+	//	service.stop();
+	
 	}
 
 	// thismethod will long press
@@ -113,7 +119,7 @@ public class BaseTest {
 	
 	
 	
-	
+	 
 	
 	
 	

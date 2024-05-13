@@ -28,7 +28,7 @@ public class eCommerce_tc_2 extends BaseTest {
 	@Test
 	public void fillformError() throws InterruptedException {
 		Thread.sleep(3000);
-		 driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("ArfatJayay");
+	//	 driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("ArfatJayay");
 		// hide key board
 		driver.hideKeyboard();
 		driver.findElement(By.xpath("//android.widget.RadioButton[@text='Female']")).click();
@@ -37,6 +37,9 @@ public class eCommerce_tc_2 extends BaseTest {
 				AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Brazil\"));"));
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Brazil']")).click();
 		driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")).click();
+		
+	String toast=	driver.findElement(By.xpath("(//android.widget.Toast)[1]")).getAttribute("name");
+	Assert.assertEquals(toast, "Please enter your name");
 		Thread.sleep(2000);
 
 	}
